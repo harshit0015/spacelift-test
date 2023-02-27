@@ -6,6 +6,10 @@ terraform {
       source  = "hashicorp/azurerm"
       version = "~>2.0"
     }
+    spacelift = {
+      source  = "spacelift-io/spacelift"
+      version = "~> 0.1.11"
+    }
     random = {
       source  = "hashicorp/random"
       version = "~>3.0"
