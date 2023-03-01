@@ -26,5 +26,3 @@ This template will help you to create Virtual Machine in Azure Cloud with proper
 7. Now , You can use the VM and play around with it. 
 
 ---
-
-
