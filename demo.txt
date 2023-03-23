@@ -1,0 +1,112 @@
+
+Vulnerability
+https://www.digitaldefense.com/blog/what-is-vulnerability-scanning-and-how-does-it-work/
+
+
+https://dzone.com/articles/introducing-kube-hunter-an-open-source-tool-for-di
+
+
+Scanning Kube-hunter link for installation on master for  unmanaged cluster -> https://medium.com/@heshani.samarasekara/kube-hunter-installing-and-testing-3ea6cfc09738 
+(download from this link in Kube-hunter ).
+
+Aqua Sec database:   https://avd.aquasec.com/
+
+
+penetration testing 
+
+type of penetrarion testing 
+
+Black box ->  isme hum system ki koi nhi info nhi dete hai like i address n all.
+
+Gray box ->   isme hum system ki thodi  info  dete hai or prior knowledge hoti hai like target ip address
+
+White box ->  isme hum system ki full  info  dete hai or prior knowledge hoti hai like target ip address  and port kaun sa open hai kaun sa close.
+
+
+
+Explore vulnerabilities: The kube-hunter knowledge base includes articles about discoverable vulnerabilities and issues. When kube-hunter reports an issue, it will show its VID (Vulnerability ID).
+
+
+https://aquasecurity.github.io/kube-hunter/
+
+label services or dusre object create for connecting Kaun si pod k liye work krna hai.
+
+Kubernetes: >=v1.11.0-0
+
+
+
+
+
+
+kubeadm - a CLI tool that will install and configure the various components of a cluster in a standard way.
+kubelet - a system service/program that runs on all nodes and handles node-level operations.
+kubectl - a CLI tool used for issuing commands to the cluster through its API Server.
+Unmanaged Kubernetes
+
+Service discovery is a mechanism by which services discover each other dynamically without the need for hard coding IP addresses or endpoint configuration. 
+
+pip -> package installer in Python like helm for k8s apt for ubuntu.
+
+
+Passive tests -  Scan the cluster and identify vulnerabilities for remediation. Examples of passive tests include API Service Discovery(Checks for the existence of K8s API Services), Kubernetes Dashboard Discovery,  and Etcd Service testing.
+Active tests -  By default this test is disable , may perform state-changing operations on a cluster, which can discover additional vulnerabilities.
+
+
+
+
+A package manager keeps track of what software is installed on your computer, and allows you to easily install new software, upgrade software to newer versions, or remove software that you previously installed. 
+
+
+MITRE ATT&CK: What It Is, How it Works, Who Uses It and Why
+MITRE ATT&CK, a framework that uniquely describes cyberattacks from the attacker’s perspective, is quickly being adopted by organizations worldwide as a tool for analyzing threats and improving security defenses.
+
+
+By default kube-hunter will run “passive hunters” only. This is a series of tests that probe for potential access points (like open ports) within your cluster. “Active hunting” can potentially do state-changing operations on the cluster, which could be harmful, so use this with care. 
+
+To turn on “active hunting” simply, add the  --active  parameter when starting kube-hunter. This enables some additional tests that will attempt to leverage any weaknesses found with the passive hunter. Active hunters are intended to give an indication of what an attacker might be able to do. While we don’t intend for any of these tests to do anything destructive, you should exercise caution as they could potentially change the state of the cluster or the code running within it. As an example, here is an active hunter which attempts to exec into a container and run uname  within it.
+
+
+
+Command ->
+
+
+
+inside the cluster and outside the cluster can scan.
+
+kube-hunter --list
+
+Kube-hunter -- list  --active
+
+kubectl create -f https://raw.githubusercontent.com/aquasecurity/kube-hunter/master/job.yaml
+kubectl logs job.batch/kube-hunter
+kubectl delete jobs --all 
+
+
+
+kube-hunter --remote Ipaddress --report json
+
+Example : kube-hunter --remote 192.168.49.2 --report json 
+
+kube-hunter --remote Ipaddress --report yaml
+
+kube-hunter --remote Ipaddress --statistics
+
+kube-hunter --remote 192.168.49.2 --report yaml
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
