@@ -1,0 +1,28 @@
+{
+  "resources": [
+    {
+      "resourceType": "function-app",
+      "properties": {
+        "name": "fapp1"
+      }
+    },
+    {
+      "resourceType": "storage-account",
+      "properties": {
+        "name": "sa1"
+      }
+    },
+    {
+      "resourceType": "eventgrid-topic",
+      "properties": {
+        "name": "egt1"
+      }
+    },
+    {
+      "resourceType": "eventhub",
+      "properties": {
+        "name": "eh1"
+      }
+    }
+  ]
+}
